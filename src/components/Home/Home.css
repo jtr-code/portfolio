@@ -1,0 +1,10 @@
+.home {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    padding: 1rem;
+    width: 100%;
+    background-color: hsl(240, 11%, 96%);
+    --primary-text: hsl(240, 3%, 12%);
+}
