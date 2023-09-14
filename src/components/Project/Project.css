@@ -1,0 +1,22 @@
+.project {
+    font-family: 'Bai Jamjuree', sans-serif;
+    min-height: 100vh;
+    padding-inline: 1rem;
+    background-color: black;
+    color: hsla(0, 0%, 100%, 0.934);
+}
+
+.project_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.project_wrapper h1 {
+    font-size: clamp(48px, 10vw, 110px);
+    font-weight: 700;
+    position: absolute;
+    top: 15vh;
+}

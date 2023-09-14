@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Work from "./components/Work/Work";
+import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path='/' element={<App />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
-                <Route path='/work' element={<Work />} />
+                <Route path='/project' element={<Project />} />
                 <Route path='/contact' element={<Contact />} />
             </Routes>
         </BrowserRouter>

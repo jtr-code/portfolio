@@ -2,10 +2,20 @@ import { useState } from "react";
 import "./Header.css";
 import Hamburger from "hamburger-react";
 
+import { motion } from "framer-motion";
+import { headerVariants } from "../../utils/motion";
+
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
+
     return (
-        <div className='nav'>
+        <motion.div
+            className='nav'
+            variants={headerVariants}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: false }}
+        >
             <div className='nav_left'>
                 <div className='title'>jishnu</div>
             </div>
@@ -15,26 +25,40 @@ const Header = () => {
                         toggled={openMenu}
                         toggle={setOpenMenu}
                         size={20}
-                        duration={0.5}
+                        duration={0.6}
                     />
                 </div>
                 {openMenu && (
-                    <div className={`list ${openMenu ? "open" : ""}`}>
+                    <motion.div
+                        className={`list ${openMenu ? "open" : ""}`}
+                        variants={headerVariants}
+                        initial='hidden'
+                        whileInView='show'
+                    >
                         <ul>
-                            <li>
-                                <a href='#'>Home</a>
-                            </li>
-                            <li>
-                                <a href='#'>Projects</a>
-                            </li>
-                            <li>
-                                <a href='#'>Contact</a>
-                            </li>
+                            <motion.li
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <a href='#'>home</a>
+                            </motion.li>
+                            <motion.li
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <a href='#'>projects</a>
+                            </motion.li>
+                            <motion.li
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <a href='#'>contact</a>
+                            </motion.li>
                         </ul>
-                    </div>
+                    </motion.div>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 
