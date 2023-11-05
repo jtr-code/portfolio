@@ -1,0 +1,23 @@
+.contact {
+  min-height: 100vh;
+  font-family: "Bai Jamjuree", sans-serif;
+  min-height: 100vh;
+  padding: 1rem;
+  width: 100%;
+  background-color: #f5f1ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e11d48;
+}
+
+.contact-content {
+  outline: 1px solid limegreen;
+
+}
+.contact-form {
+  outline: 1px solid hotpink;
+  align-items: center;
+
+}
