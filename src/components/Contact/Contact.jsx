@@ -3,7 +3,7 @@ import { TextField } from "@mui/material";
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
 
 const Contact = () => {
-  https: return (
+  return (
     <div className="contact">
       <div className="contact-content">
         <h1>Send me a message!</h1>
@@ -13,6 +13,15 @@ const Contact = () => {
       <form className="contact-form">
         <div className="form-group">
           <TextField
+            sx={{
+              "& .MuiInput-underline:before, &.Mui-focused .MuiInput-underline, &:hover .MuiInput-underline:before":
+                {
+                  borderBottomColor: "#e11d48!important"
+                },
+              "& .MuiInput-root::after": {
+                borderBottom: "2px solid #e11d48!important"
+              }
+            }}
             id="name"
             label="Your Name"
             variant="standard"
@@ -26,6 +35,15 @@ const Contact = () => {
         </div>
         <div className="form-group">
           <TextField
+            sx={{
+              "& .MuiInput-underline:before, &.Mui-focused .MuiInput-underline, &:hover .MuiInput-underline:before":
+                {
+                  borderBottomColor: "#e11d48!important"
+                },
+              "& .css-v4u5dn-MuiInputBase-root-MuiInput-root::after": {
+                borderBottom: "2px solid #e11d48!important"
+              }
+            }}
             id="email"
             label="Your Email"
             variant="standard"
@@ -40,7 +58,7 @@ const Contact = () => {
         <div className="form-group form-group__full-width">
           <label htmlFor="message">Your Message</label>
           <textarea
-            rows="4"
+            rows="3"
             name="message"
             id="message"
             required

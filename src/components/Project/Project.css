@@ -1,79 +1,71 @@
-.project-wrapper {
-	max-width: 80rem;
-	margin-inline: auto;
-}
 .project {
-	min-height: 100vh;
-	font-family: "Bai Jamjuree", sans-serif;
-	padding-inline: 1rem;
-	text-align: center;
-	background-color: black;
-	color: hsla(0, 0%, 100%, 0.934);
-	padding-block: 1rem;
+  padding-inline: 1rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  background-color: black;
+  color: hsla(0, 0%, 100%, 0.934);
+  padding-block: 1rem;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
 }
 
-.project-content h2 {
-	font-size: 3rem;
-	font-size: clamp(3rem, 1.7083333333333335rem + 6.458333333333332vw, 6.875rem);
-}
-.project-content p {
-	font-size: 1rem;
-	font-size: clamp(1rem, 0.75rem + 1.25vw, 2rem);
-	max-width: 70ch;
-	text-wrap: balance;
-	text-align: center;
-	margin-inline: auto;
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.project-desc {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
+.project-item {
+  align-items: center;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding: 2.5em;
+  width: 60%;
+}
+.project-item h1 {
+  font-size: 1.375rem;
+  font-size: clamp(1.375rem, 1.21875rem + 0.78125vw, 2rem);
+}
+.project-item > * {
+  transition: all 0.3s ease-in-out;
 }
 
-.project-items {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: "image content";
-	place-items: center;
-	margin-block-start: 1.5rem;
-}
-.content {
-	grid-area: content;
-}
-.image {
-	grid-area: image;
+.project-item > *:hover:not(.project-item button) {
+  transform: translateX(3%) translateY(-3%);
+  opacity: 0.8;
 }
 
-.project-list img {
-	display: block;
-	max-width: 100%;
-}
-.btn {
-	display: inline-block;
-	font-weight: 600;
-	font-size: 1rem;
-	text-decoration: none;
-	border: none;
-	letter-spacing: -0.05em;
-	background-color: #e11d48;
-	color: #f1f5f9;
-	padding: 0.5em 1em;
-	border-radius: 6px;
-	box-shadow: 0 10px 20px #e11d4880, 0 6px 6px #e11d4880,
-		0 0 100px -10px #e11d48;
-	transition: transform 0.3s, letter-spacing 0.3s, box-shadow 0.3s, padding 0.3s;
+.project-item:nth-child(1) {
+  border-top: 1px solid #c9c9c9;
 }
 
-.btn:hover {
-	padding-inline: 2em;
-	letter-spacing: 0.1em;
+.project-item button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.7000000000000001rem + 0.5vw, 1.3rem);
+  text-decoration: none;
+  border: none;
+  letter-spacing: -0.05em;
+  background-color: #e11d48;
+  color: #f1f5f9;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px #e11d4880, 0 6px 6px #e11d4880,
+    0 0 100px -10px #e11d48;
+  transition: transform 0.3s, letter-spacing 0.3s, box-shadow 0.3s, padding 0.3s;
 }
 
-@media (width<=769px) {
-	.project-items {
-		display: flex;
-		flex-direction: column-reverse;
-	}
+.project-item button:hover {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+@media (width<=50em) {
+  .project-item {
+    width: 100%;
+    padding-inline: 1em;
+  }
 }

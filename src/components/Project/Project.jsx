@@ -1,6 +1,4 @@
 import "./Project.css";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
 
 // images
 import flipkart from "./images/flipcart.png";
@@ -32,16 +30,28 @@ const Project = () => {
     }
   ];
 
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef
-  });
-
-  const x = useTransform(scrollYProgress, [1, 0], ["1%", "-95%"]);
-
   return (
     <div className="project">
-      <div className="project-wrapper">
+      <div className="project-list">
+        <div className="project-item">
+          <h1>AI IMAGE PROMPT</h1>
+          <button>Website</button>
+        </div>
+        <div className="project-item">
+          <h1>ECOMMERCE</h1>
+          <button>Website</button>
+        </div>
+        <div className="project-item">
+          <h1>FLIPKART CLONE</h1>
+          <button>Website</button>
+        </div>
+        <div className="project-item">
+          <h1>CREATIVE ENVIRONMENTAL SOLUTIONS</h1>
+          <button className="btn">Website</button>
+        </div>
+      </div>
+
+      {/* <div className="project-wrapper">
         <div className="project-content">
           <h2>Projects</h2>
           <p>
@@ -67,7 +77,7 @@ const Project = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

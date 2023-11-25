@@ -43,22 +43,16 @@ label {
   font-weight: 500;
 }
 
-.css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
-  border-bottom: 2px solid #e11d48 !important;
-}
-
-.css-v4u5dn-MuiInputBase-root-MuiInput-root:before {
-  border-bottom: 1px solid #e11d4777 !important;
-}
 #message {
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid firebrick;
+  border-bottom: 1px solid #e11d48;
   padding-block-start: 1em;
   resize: none;
   outline: none;
   color: #e11d48;
   text-transform: initial;
+  line-height: 1.5rem;
 }
 #message::placeholder {
   color: rgb(224, 28, 71, 0.7);
