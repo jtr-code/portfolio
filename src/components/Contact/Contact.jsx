@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xwkddlan");
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_EMAIL_KEY);
   const formRef = useRef();
   const handleFormSubmit = async (event) => {
     await handleSubmit(event);
