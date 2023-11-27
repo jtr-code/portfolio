@@ -22,17 +22,20 @@ const HeroSection = () => {
           <div className="bottom_left">
             <ul>
               <li>
-                <a href="#">
+                <a href="https://github.com/jtr-code" target="_blank">
                   <GitHub />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="mailto:jishnutraj817@gmail.com" target="_blank">
                   <Email />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/jishnutraj"
+                  target="_blank"
+                >
                   <LinkedIn />
                 </a>
               </li>

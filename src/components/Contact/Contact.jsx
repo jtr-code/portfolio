@@ -1,16 +1,45 @@
 import "./Contact.css";
 import { TextField } from "@mui/material";
+import { useForm } from "@formspree/react";
 import { KeyboardDoubleArrowRight } from "@mui/icons-material";
+import { useRef } from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xwkddlan");
+  const formRef = useRef();
+  const handleFormSubmit = async (event) => {
+    await handleSubmit(event);
+
+    if (state.succeeded) {
+      toast.success("Your Email has been sent!");
+      window.scrollTo(0, 0);
+      formRef.current.reset();
+    }
+  };
+
   return (
     <div className="contact">
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="contact-content">
         <h1>Send me a message!</h1>
         <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
       </div>
 
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleFormSubmit} ref={formRef}>
         <div className="form-group">
           <TextField
             sx={{
@@ -40,10 +69,11 @@ const Contact = () => {
                 {
                   borderBottomColor: "#e11d48!important"
                 },
-              "& .css-v4u5dn-MuiInputBase-root-MuiInput-root::after": {
+              "& .MuiInput-root::after": {
                 borderBottom: "2px solid #e11d48!important"
               }
             }}
+            type="email"
             id="email"
             label="Your Email"
             variant="standard"
@@ -69,7 +99,7 @@ const Contact = () => {
         </div>
         <div className="form-group form-group__center">
           <button>
-            send
+            Send
             <KeyboardDoubleArrowRight />
           </button>
         </div>

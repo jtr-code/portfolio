@@ -74,6 +74,11 @@ label {
   transition: all 300ms ease;
 }
 
+.form-group button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e11d48;
+}
+
 .form-group button:hover {
   background-color: #e11d48;
   color: #f5f1ed;

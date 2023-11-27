@@ -6,7 +6,11 @@ import {
   textVariant2
 } from "../../utils/motion";
 
+import resumeUrl from "./resume/jishnu.pdf";
+
 const About = () => {
+  const resume = "jishnu.pdf";
+
   const phrases = [
     "I'm from Kerala, India. When I started college, I signed up ",
     "for a Bachelor of Computer Science to understand and learn ",
@@ -33,9 +37,11 @@ const About = () => {
             </motion.span>
           ))}
         </p>
-        <motion.button variants={textVariant(1.1)} type="button">
-          DOWNLOAD RESUME
-        </motion.button>
+        <a href={resumeUrl} download={resume}>
+          <motion.button variants={textVariant(1.1)} type="button">
+            DOWNLOAD RESUME
+          </motion.button>
+        </a>
       </motion.div>
     </div>
   );

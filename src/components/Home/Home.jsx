@@ -6,8 +6,8 @@ import AnimatedCursor from "react-animated-cursor";
 const Home = () => {
   return (
     <div className="home">
-      <Header />
-      {/* <AnimatedCursor
+      {/* <Header /> */}
+      <AnimatedCursor
         innerSize={8}
         outerSize={30}
         innerScale={1}
@@ -15,12 +15,12 @@ const Home = () => {
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-          backgroundColor: "hsl(240, 3%, 12%)"
+          backgroundColor: "#a61434"
         }}
         outerStyle={{
-          border: "3px solid hsl(240, 3%, 12%)"
+          border: "3px solid #e11d48"
         }}
-      /> */}
+      />
       <HeroSection />
     </div>
   );
